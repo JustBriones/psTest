@@ -294,13 +294,13 @@ svg {
 .ps-map-location-textbox {
   padding-left: 36px;
   border-radius: 6px;
+  border: none;
   width: 100%;
   height: 100%;
   font-size: 17px;
   position: relative;
   float: left;
 }
-
 .ps-map-geolocation-button {
   position: absolute;
   background: transparent;
@@ -450,13 +450,19 @@ svg {
     font-weight: normal;
     font-size: 20px;
 }
-
-.ps-local-section span, .ps-local-section .ps-in-stock {
+.ps-local-section-5 span {
   position: absolute;
-  bottom: 15px;
-  left: 20px;
+  bottom: 16px;
+  left: 28px;
 }
-
+.ps-get-directions-button span {
+    position: relative;
+}
+.ps-local-section-5 .ps-in-stock {
+  position: absolute;
+  bottom: 16px;
+  left: 28px;
+}
 .ps-local-seller-logo img {
   position: absolute;
   top: 20px;
@@ -525,26 +531,90 @@ svg {
 /*tablet, max-width 1024*/
 @media screen and (max-width: 1024px) {
 
-
-
-  .ps-local-container.ps-local-tab {
+  .ps-tab-input-online:checked ~ input + div + div + div, .ps-tab-input-local:checked+ div + div + div + div {
+      display: block;
+  }
+  .ps-tab-input-online:checked ~ input + div + .ps-column-headers .ps-online-tab-label, .ps-tab-input-local:checked ~ div + .ps-column-headers .ps-local-tab-label {
+      background: #127adb;
+  }
+  .ps-online-tab-label, .ps-local-tab-label {
+    position: relative;
+    float: left;
+    min-width: 160px;
+    width: auto;
+    height: 100%;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 15px;
+    justify-content: center;
+  }
+  .ps-online-container, .ps-local-container {
+    width: 100%;
+    padding: 0;
+  }
+  .ps-online-container, .ps-local-container {
+    position: relative;
     display: none;
   }
-  .ps-online-container {
+  .ps-online-section {
+    margin-bottom: 25px;
+  }
+  .ps-online-sellers {
+    overflow: hidden;
+    height: auto;
+    padding: 15px 15px 0;
+  }
+  .ps-online-seller-select {
+    height: 76px;
+  }
+  /*local container section within first media query*/
+  .ps-local-container {
+    padding: 20px 15px 5px;
+  }
+  .ps-local-section {
+    width: 154px;
+    display: block;
+    float: right;
+  }
+  .ps-map-pushpin-select {
+    min-height: 120px;
+    height: auto;
+  }
+  .ps-get-directions-button {
+    position: absolute;
+    left: 80%;
+    bottom: 21px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    background: #f84e3d;
+    box-shadow: 0px 1px 0px 0px #ba3222;
+    width: 124px;
+    height: 42px;
+    text-align: center;
+    padding: 14px 0 0;
+  }
+  .ps-store-hours {
+    display: block;
+    float: left;
     width: 100%;
-    padding: 0 20px 10px 0;
+    margin: 10px 0 0 0;
+    position: relative;
+    right: auto;
+    bottom: auto;
   }
-  .ps-online-tab-label {
-    width: 20%;
-  }
-
-  .ps-online-seller-listing-cell.ps-online-price-cell {
-    margin-left: 90px;
+  .ps-hours-known {
+    text-align: left;
+    padding: 0 12px 0 0;
+    float: left;
   }
 }
 
 /*phone, max-width 767px*/
 @media only screen and (max-width: 767px) {
+  .ps-header-container {
+    height: auto;
+  }
   .ps-wtb-label {
     padding: 0;
     margin: 0;
@@ -559,9 +629,6 @@ svg {
     font-size: 15px;
     top: 120%;
     left: 15%;
-  }
-  .ps-header-container {
-    height: 165px;
   }
   .ps-header-container img {
     width: 70px;
@@ -627,8 +694,9 @@ svg {
   }
   .ps-online-seller-listing-cell.ps-online-availability-cell {
     position: absolute;
-    left: 80%;
-    top: 16px;
+    right: 20px;
+    top: 20px;
+    text-align: right;
   }
   .ps-in-stock {
     font-size: 12px;
@@ -645,5 +713,30 @@ svg {
   .ps-lightbox-close svg {
     width: 7px;
     height: 7px;
+  }
+  .ps-header-container .ps-product-details {
+    position: relative;
+    font-size: 16px;
+    top: 80px;
+    right: 20px;
+    overflow: visible;
+    text-align: center;
+    line-height: 28px;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 18%;
+    font-weight: bold;
+  }
+  .ps-online-seller-listing-cell.ps-online-price-cell {
+    position: absolute;
+    font-size: 11px;
+    bottom: 10px;
+    left: 26px;
+    margin: 0;
+  }
+  .ps-online-tab-label, .ps-local-tab-label {
+    text-align: center;
+    margin: 0;
   }
 }
