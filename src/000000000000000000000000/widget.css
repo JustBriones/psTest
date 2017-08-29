@@ -419,13 +419,6 @@ svg {
   width: 100%;
   box-shadow: 0px 3px 7px 0px rgba(46,46,46,0.2);
 }
-
-.ps-local-left-mobile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .ps-pushpin-wrapper img {
   width: 20px;
   height: 30px;
@@ -572,7 +565,7 @@ svg {
     padding: 20px 15px 5px;
   }
   .ps-local-section {
-    width: 154px;
+    width: 100%;
     display: block;
     float: right;
   }
@@ -607,6 +600,25 @@ svg {
     text-align: left;
     padding: 0 12px 0 0;
     float: left;
+  }
+  .ps-local-section-3 {
+    width: 27%;
+    text-align: right;
+    position: relative;
+    float: left;
+    margin-left: 40%;
+  }
+  .ps-distance.ps-desktop {
+    display: none;
+  }
+  .ps-hours-known {
+    text-align: left;
+    padding: 0 12px 0 0;
+    float: right;
+  }
+  .ps-store-hours-all-days {
+    font-weight: 700;
+    text-align: left;
   }
 }
 
