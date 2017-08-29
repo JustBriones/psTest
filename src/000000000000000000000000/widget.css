@@ -177,10 +177,13 @@ button.ps-lightbox-close {
 
 /** Header Styles 1
  ------------------------------------------------------------*/
+ .ps-header-container-container {
+  height: 145px;
+ }
 .ps-header-container {
   padding: 20px;
   width: 100%;
-  height: 145px;
+  height: 100%;
   background: #fff;
 }
 .ps-online-container {
@@ -564,6 +567,7 @@ svg {
   .ps-local-sellers {
     overflow: hidden;
     height:100%;
+    padding: 0;
   }
   .ps-local-section {
     width: 100%;
@@ -639,8 +643,11 @@ svg {
 
 /*phone, max-width 767px*/
 @media only screen and (max-width: 767px) {
+  .ps-header-container-container {
+   height: 170px;
+  }
   .ps-header-container {
-    height: auto;
+    height: 100%;
   }
   .ps-wtb-label {
     padding: 0;
