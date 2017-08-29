@@ -448,9 +448,6 @@ svg {
   bottom: 16px;
   left: 28px;
 }
-.ps-get-directions-button span {
-    position: relative;
-}
 .ps-local-section-5 .ps-in-stock {
   position: absolute;
   bottom: 16px;
@@ -469,9 +466,9 @@ svg {
   font-size: 15px;
   width: 185px;
 }
-.ps-get-directions-button {
+.ps-get-directions-button{
   position: absolute;
-  left: 168px;
+  right: 218px;
   bottom: 15px;
   color: #03a9f4;
   fill: currentColor;
@@ -575,7 +572,7 @@ svg {
   }
   .ps-get-directions-button {
     position: absolute;
-    left: 80%;
+    right: 20px;
     bottom: 21px;
     color: #fff;
     font-size: 13px;
@@ -591,10 +588,13 @@ svg {
     display: block;
     float: left;
     width: 100%;
-    margin: 10px 0 0 0;
+    margin: 27px 0 0 0;
     position: relative;
     right: auto;
     bottom: auto;
+    color: black;
+    font-size: 13px;
+    line-height: 18px;
   }
   .ps-hours-known {
     text-align: left;
@@ -619,6 +619,17 @@ svg {
   .ps-store-hours-all-days {
     font-weight: 700;
     text-align: left;
+    min-width: 60px;
+  }
+  .ps-address {
+    position: absolute;
+    left: 168px;
+    top: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    width: 16%;
+    min-height: 60px;
+    padding: 0 0 20px 0;
   }
 }
 
